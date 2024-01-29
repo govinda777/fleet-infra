@@ -32,7 +32,7 @@ brew install weaveworks/tap/gitops
 
 - Crie  HelmRepository and HelmRelease to deploy Weave GitOps
 
-PASSWORD="hermes1"
+export PASSWORD="hermes1"
 gitops create dashboard ww-gitops \
   --password=$PASSWORD \
   --export > ./clusters/my-cluster/weave-gitops-dashboard.yaml
