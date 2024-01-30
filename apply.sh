@@ -59,7 +59,7 @@ flux bootstrap github \
 
 # Voltar para o contexto padrão
 
-kubectl config use-context minikube
+kubectl config use-context flux
 
 kubectl get pods -n flux-system
 
