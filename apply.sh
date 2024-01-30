@@ -41,22 +41,3 @@ minikube start --profile tf-controller  --driver=docker
 kubectl config use-context tf-controller
 
 kubectl config current-context
-
-minikube dashboard
-
-cd ../gitops-tf-controller/
-
-export GITHUB_USER=govinda777
-
-flux bootstrap github \
-  --owner=$GITHUB_USER \
-  --repository=gitops-tf-controller \
-  --branch=main \
-  --path=./cluster/my-cluster \
-  --personal \
-  --token-auth
-
-
-
-
-
