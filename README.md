@@ -65,3 +65,8 @@ user admin
 password hermes1
 
 http://localhost:9001/
+
+## Apply & Destroy
+
+chmod +x destroy.sh
+chmod +x apply.sh

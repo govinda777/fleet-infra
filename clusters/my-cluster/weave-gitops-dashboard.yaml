@@ -37,6 +37,6 @@ spec:
     WEAVE_GITOPS_FEATURE_TELEMETRY: "true"
     adminUser:
       create: true
-      passwordHash: $2a$10$s/6n2fJs.zqCxT9NO0q4bOchJqMUnx6LdQM97Z7NgMXeUAW9ztzDy
+      passwordHash: $2a$10$Nihs8MciOq.zDsztilXBouQ1M8ndAeO1nDHXVmvpN7J11zBJ8Qdoi
       username: admin
 
