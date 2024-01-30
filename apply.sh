@@ -1,5 +1,4 @@
-docker system prune
-docker volume prune
+source .env
 
 minikube start  --profile flux --driver=docker
 
@@ -57,15 +56,7 @@ flux bootstrap github \
   --personal \
   --token-auth
 
-# Voltar para o contexto padrão
 
-kubectl config use-context flux
-
-kubectl get pods -n flux-system
-
-kubectl logs tf-controller-5b76c69997-rlqgb -n flux-system
-
-kubectl describe pod tf-controller-5b76c69997-rlqgb -n flux-system
 
 
 
