@@ -16,6 +16,11 @@ flux bootstrap github \
   --personal \
   --components-extra image-reflector-controller,image-automation-controller
 
+kubectl create secret generic aws-credentials \
+--namespace=flux-system \
+--from-literal=AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
+--from-literal=AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+
 kubectl config current-context
 
 # Config UI
@@ -30,14 +35,3 @@ gitops create dashboard ww-gitops \
 
 kubectl get pods -n flux-system
 
-# Start UI
-
-kubectl port-forward svc/ww-gitops-weave-gitops -n flux-system 9001:9001
-
-# Config tf-controller
-
-minikube start --profile tf-controller  --driver=docker
-
-kubectl config use-context tf-controller
-
-kubectl config current-context
