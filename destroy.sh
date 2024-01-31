@@ -1,4 +1,4 @@
-docker system prune
-docker volume prune
+docker system prune -y
+docker volume prune -y
 
 minikube delete --profile flux
