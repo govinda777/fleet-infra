@@ -70,3 +70,7 @@ http://localhost:9001/
 
 chmod +x destroy.sh
 chmod +x apply.sh
+
+## Como forçar um reconcile
+
+flux reconcile source git flux-system
