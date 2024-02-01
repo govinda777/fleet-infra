@@ -74,3 +74,12 @@ chmod +x apply.sh
 ## Como forçar um reconcile
 
 flux reconcile source git flux-system
+
+
+## Manual apply
+
+kubectl apply -f aws-credentials.yaml -n flux-system
+kubectl apply -f iac-instance-ec2_repo.yaml -n flux-system
+kubectl apply -f iac-instance-ec2_terraform.yaml -n flux-system
+
+kubectl delete pod iac-instance-ec2-tf-runner -n flux-system
